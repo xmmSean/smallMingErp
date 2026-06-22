@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.smallming.erp.mapper.order.OrderMapper">
+
+    <insert id="insert" parameterType="com.smallming.erp.domain.order.Order">
+        insert into orders (
+            tenant_id,
+            id,
+            order_no,
+            buyer_id,
+            account_id,
+            state,
+            total_amount,
+            created_at,
+            updated_at
+        ) values (
+            #{tenantId},
+            #{id},
+            #{orderNo},
+            #{buyerId},
+            #{accountId},
+            #{state},
+            #{totalAmount},
+            #{createdAt},
+            #{updatedAt}
+        )
+    </insert>
+
+</mapper>
